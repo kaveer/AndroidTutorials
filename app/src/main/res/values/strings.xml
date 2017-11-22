@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Android Tutorials</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="button">Click me</string>
+    <string name="buttonSourceCode">View source code</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ButtonSourceCodeLink">https://gist.github.com/kaveer/2a29ebbc7f867d93bd10eab8496078dc</string>
+</resources>
