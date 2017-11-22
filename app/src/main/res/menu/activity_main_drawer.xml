@@ -20,7 +20,7 @@
         <menu>
             <item
                 android:id="@+id/CheckInternet"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_sphere"
                 android:title="Check Connection"/>
         </menu>
     </item>
