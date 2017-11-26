@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RatingBar;
+import android.widget.Toast;
 
 import com.kavsoftware.kaveer.androidtutorials.R;
 
@@ -23,8 +25,22 @@ public class RatingBarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_rating_bar, container, false);
+        getActivity().setTitle("Rating bar");
+
+        View view = inflater.inflate(R.layout.fragment_rating_bar, container, false);
+
+
+        final RatingBar rating = view.findViewById(R.id.ratingBar2);
+        rating.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                Toast messageBox = Toast.makeText(getActivity() , String.valueOf(rating.getRating()) , Toast.LENGTH_SHORT);
+                messageBox.show();
+
+
+            }
+        });
+        return view;
     }
 
 }

@@ -14,7 +14,17 @@ import android.widget.Toast;
 
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Functionality.CheckInternetFragment;
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.ButtonFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.CheckBoxFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.ImageButtonFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.ProgressBarFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.RadioButtonFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.RatingBarFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.SpinnerFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.ToggleButtonFragment;
 import com.kavsoftware.kaveer.androidtutorials.R;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,6 +44,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        AppCenter.start(getApplication(), "e3566d18-d32b-4b73-a30b-e0e2cc6d216a",
+                Analytics.class, Crashes.class);
 
 
     }
@@ -81,9 +94,12 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.textField) {
-            // Handle the camera action
-        } else if (id == R.id.button){
+        if (id == R.id.NavImageButton) {
+            ImageButtonFragment fragment = new ImageButtonFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        } else if (id == R.id.NavButton){
             ButtonFragment fragment = new  ButtonFragment();
             android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
             fmTransaction.replace(R.id.MainFrameLayout, fragment);
@@ -91,6 +107,42 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.CheckInternet){
             CheckInternetFragment fragment = new  CheckInternetFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavToggleButton){
+            ToggleButtonFragment fragment = new ToggleButtonFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavRadioButton){
+            RadioButtonFragment fragment = new RadioButtonFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavCheckBox){
+            CheckBoxFragment fragment = new CheckBoxFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavSpinner){
+            SpinnerFragment fragment = new SpinnerFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavRatingStar){
+            RatingBarFragment fragment = new RatingBarFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavProgressBar){
+            ProgressBarFragment fragment = new ProgressBarFragment();
             android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
             fmTransaction.replace(R.id.MainFrameLayout, fragment);
             fmTransaction.commit();

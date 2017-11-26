@@ -6,13 +6,37 @@
     <item android:title="Widget">
         <menu>
             <item
-                android:id="@+id/button"
+                android:id="@+id/NavButton"
                 android:icon="@drawable/ic_button"
                 android:title="Button"/>
             <item
-                android:id="@+id/textField"
+                android:id="@+id/NavImageButton"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Text Field"/>
+                android:title="Image button"/>
+            <item
+                android:id="@+id/NavToggleButton"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Toggle Button"/>
+            <item
+                android:id="@+id/NavRadioButton"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Radio Button"/>
+            <item
+                android:id="@+id/NavCheckBox"
+                android:icon="@drawable/ic_menu_send"
+                android:title="CheckBox"/>
+            <item
+                android:id="@+id/NavSpinner"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Spinner"/>
+            <item
+                android:id="@+id/NavRatingStar"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Rating Star"/>
+            <item
+                android:id="@+id/NavProgressBar"
+                android:icon="@drawable/ic_menu_send"
+                android:title="ProgressBar"/>
         </menu>
     </item>
 

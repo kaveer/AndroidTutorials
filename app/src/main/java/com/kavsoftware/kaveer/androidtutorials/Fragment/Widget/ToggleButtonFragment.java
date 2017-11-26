@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.kavsoftware.kaveer.androidtutorials.R;
 
@@ -23,8 +25,21 @@ public class ToggleButtonFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_toggle_button, container, false);
+        getActivity().setTitle("Toggle Button");
+
+        View view = inflater.inflate(R.layout.fragment_toggle_button, container, false);
+
+        ToggleButton button = view.findViewById(R.id.toggleButton);
+
+        if (button.isChecked()){
+            Toast messageBox = Toast.makeText(getActivity() , "on" , Toast.LENGTH_SHORT);
+            messageBox.show();
+        }else {
+            Toast messageBox = Toast.makeText(getActivity() , "off" , Toast.LENGTH_SHORT);
+            messageBox.show();
+        }
+
+        return view;
     }
 
 }
