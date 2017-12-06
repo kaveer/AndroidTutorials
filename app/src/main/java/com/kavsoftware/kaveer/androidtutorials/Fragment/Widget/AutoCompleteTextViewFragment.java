@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 
 import com.kavsoftware.kaveer.androidtutorials.R;
 
@@ -14,6 +16,7 @@ import com.kavsoftware.kaveer.androidtutorials.R;
  */
 public class AutoCompleteTextViewFragment extends Fragment {
 
+    AutoCompleteTextView auto;
 
     public AutoCompleteTextViewFragment() {
         // Required empty public constructor
@@ -23,8 +26,19 @@ public class AutoCompleteTextViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_auto_complete_text_view, container, false);
+        getActivity().setTitle("Auto complete");
+
+        View view = inflater.inflate(R.layout.fragment_auto_complete_text_view, container, false);
+
+        auto = view.findViewById(R.id.autoCompleteTextView);
+        String[] months = getResources().getStringArray(R.array.month);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getContext(), android.R.layout.simple_list_item_1, months);
+
+        auto.setAdapter(adapter);
+
+
+
+        return view;
     }
 
 }

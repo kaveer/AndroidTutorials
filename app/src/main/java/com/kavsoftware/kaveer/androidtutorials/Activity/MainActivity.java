@@ -13,13 +13,18 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Functionality.CheckInternetFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.AlertDialogFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.AutoCompleteTextViewFragment;
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.ButtonFragment;
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.CheckBoxFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.DatePickerFragment;
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.ImageButtonFragment;
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.ProgressBarFragment;
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.RadioButtonFragment;
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.RatingBarFragment;
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.SpinnerFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.TextSwitcherFragment;
+import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.TimePickerFragment;
 import com.kavsoftware.kaveer.androidtutorials.Fragment.Widget.ToggleButtonFragment;
 import com.kavsoftware.kaveer.androidtutorials.R;
 import com.microsoft.appcenter.AppCenter;
@@ -143,6 +148,36 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.NavProgressBar){
             ProgressBarFragment fragment = new ProgressBarFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavDatePicker){
+            DatePickerFragment fragment = new DatePickerFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavTimePicker){
+            TimePickerFragment fragment = new TimePickerFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavAutoCompleteTextView){
+            AutoCompleteTextViewFragment fragment = new AutoCompleteTextViewFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavAlertDialog){
+            AlertDialogFragment fragment = new AlertDialogFragment();
+            android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
+            fmTransaction.replace(R.id.MainFrameLayout, fragment);
+            fmTransaction.commit();
+        }
+        else if (id == R.id.NavTextSwitcher){
+            TextSwitcherFragment fragment = new TextSwitcherFragment();
             android.support.v4.app.FragmentTransaction fmTransaction = getSupportFragmentManager().beginTransaction();
             fmTransaction.replace(R.id.MainFrameLayout, fragment);
             fmTransaction.commit();

@@ -7,36 +7,56 @@
         <menu>
             <item
                 android:id="@+id/NavButton"
-                android:icon="@drawable/ic_button"
+                android:icon="@drawable/ic_interface"
                 android:title="Button"/>
             <item
                 android:id="@+id/NavImageButton"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_interface"
                 android:title="Image button"/>
             <item
                 android:id="@+id/NavToggleButton"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_interface"
                 android:title="Toggle Button"/>
             <item
                 android:id="@+id/NavRadioButton"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_interface"
                 android:title="Radio Button"/>
             <item
                 android:id="@+id/NavCheckBox"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_interface"
                 android:title="CheckBox"/>
             <item
                 android:id="@+id/NavSpinner"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_interface"
                 android:title="Spinner"/>
             <item
                 android:id="@+id/NavRatingStar"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_interface"
                 android:title="Rating Star"/>
             <item
                 android:id="@+id/NavProgressBar"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_interface"
                 android:title="ProgressBar"/>
+            <item
+                android:id="@+id/NavDatePicker"
+                android:icon="@drawable/ic_interface"
+                android:title="Date picker"/>
+            <item
+                android:id="@+id/NavTimePicker"
+                android:icon="@drawable/ic_interface"
+                android:title="Time picker"/>
+            <item
+                android:id="@+id/NavAutoCompleteTextView"
+                android:icon="@drawable/ic_interface"
+                android:title="Auto Complete"/>
+            <item
+                android:id="@+id/NavAlertDialog"
+                android:icon="@drawable/ic_interface"
+                android:title="Alert Dialog"/>
+            <item
+                android:id="@+id/NavTextSwitcher"
+                android:icon="@drawable/ic_interface"
+                android:title="Text Switcher"/>
         </menu>
     </item>
 
